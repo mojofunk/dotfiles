@@ -13,6 +13,8 @@ set number
 set tw=79
 set formatoptions+=t
 
+"set nohlsearch
+
 "set background=dark
 "colorscheme desert
 
