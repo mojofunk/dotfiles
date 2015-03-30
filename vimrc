@@ -15,7 +15,7 @@ set formatoptions+=t
 
 "set nohlsearch
 
-"set background=dark
+set background=dark
 "colorscheme desert
 
 au BufRead,BufNewFile *.md set filetype=markdown
