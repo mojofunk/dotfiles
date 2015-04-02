@@ -1,0 +1,11 @@
+[user]
+	name = Tim Mayberry
+	email = mojofunk@gmail.com
+[push]
+	default = simple
+
+[color]
+	status = true
+	branch = true
+	interactive = true
+	diff = true

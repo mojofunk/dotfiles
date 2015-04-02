@@ -9,7 +9,7 @@
 
 dir=~/Data/dotfiles               # dotfiles directory
 olddir=~/Data/dotfiles_old        # old dotfiles backup directory
-files="vimrc vim"                 # list of files/folders to symlink
+files="vimrc vim gitconfig"       # list of files/folders to symlink
 
 ##########
 
