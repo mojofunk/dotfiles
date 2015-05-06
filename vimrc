@@ -27,3 +27,4 @@ imap <C-K> <ESC>:pyf ~/bin/clang-format.py<CR>i
 
 " swap beteen header and source files
 map <F4> :e %:p:s,.hpp$,.X123X,:s,.cpp$,.hpp,:s,.X123X$,.cpp,<CR>
+map <F5> :e %:p:s,.h$,.X123X,:s,.cc$,.h,:s,.X123X$,.cc,<CR>
