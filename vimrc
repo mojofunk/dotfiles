@@ -27,14 +27,15 @@ imap <C-K> <ESC>:pyf ~/bin/clang-format.py<CR>i
 
 " toggle white space characters visible
 " http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
-map <F3> :set list!<CR>
+map <F2> :set list!<CR>
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 highlight SpecialKey term=standout ctermbg=yellow guibg=yellow
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
+
+" toggle spell check
+map <F3> :setlocal spell! spelllang=en_us<CR>
 
 " swap beteen header and source files
 map <F4> :e %:p:s,.hpp$,.X123X,:s,.cpp$,.hpp,:s,.X123X$,.cpp,<CR>
 map <F5> :e %:p:s,.h$,.X123X,:s,.cc$,.h,:s,.X123X$,.cc,<CR>
 
-" toggle spell check
-map <F5> :setlocal spell! spelllang=en_us<CR>
