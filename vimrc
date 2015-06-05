@@ -9,6 +9,8 @@ set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 
+"set foldmethod=indent
+
 set number
 set tw=79
 set formatoptions+=t
@@ -39,3 +41,17 @@ map <F3> :setlocal spell! spelllang=en_us<CR>
 map <F4> :e %:p:s,.hpp$,.X123X,:s,.cpp$,.hpp,:s,.X123X$,.cpp,<CR>
 map <F5> :e %:p:s,.h$,.X123X,:s,.cc$,.h,:s,.X123X$,.cc,<CR>
 
+" open all folds
+inoremap <F7> <C-O>zR
+nnoremap <F7> zR
+onoremap <F7> <C-C>zR
+
+" toggle fold under cursor
+inoremap <F8> <C-O>za
+nnoremap <F8> za
+onoremap <F8> <C-C>za
+
+" close all folds
+inoremap <F9> <C-O>zM
+nnoremap <F9> zM
+onoremap <F9> <C-C>zM
