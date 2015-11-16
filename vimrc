@@ -2,8 +2,8 @@ set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 "set smarttab
 
 set ai "Auto indent
@@ -19,6 +19,7 @@ set formatoptions+=t
 
 set background=dark
 "colorscheme desert
+"colorscheme elflord
 
 au BufRead,BufNewFile *.md set filetype=markdown
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
