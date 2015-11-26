@@ -17,6 +17,8 @@ set formatoptions+=t
 
 "set nohlsearch
 
+syntax on
+
 set background=dark
 "colorscheme desert
 "colorscheme elflord
