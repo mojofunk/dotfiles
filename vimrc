@@ -24,6 +24,8 @@ set background=dark
 "colorscheme elflord
 
 au BufRead,BufNewFile *.md set filetype=markdown
+autocmd Filetype markdown setlocal expandtab tabstop=4 shiftwidth=4
+
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 
 " source code formatting with clang-format
