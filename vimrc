@@ -46,6 +46,10 @@ map <F3> :setlocal spell! spelllang=en_us<CR>
 map <F4> :e %:p:s,.hpp$,.X123X,:s,.cpp$,.hpp,:s,.X123X$,.cpp,<CR>
 map <F5> :e %:p:s,.h$,.X123X,:s,.cc$,.h,:s,.X123X$,.cc,<CR>
 
+" search for visually selected text with //
+vnoremap // y/<C-R>"<CR>
+
+
 " open all folds
 inoremap <F7> <C-O>zR
 nnoremap <F7> zR
