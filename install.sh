@@ -25,6 +25,11 @@ cd $dir
 for file in $files; do
 	echo "Moving any existing dotfiles from ~ to $olddir"
 	mv ~/.$file $olddir
-	echo "Creating symlink to $file in home directory."
-	ln -s $dir/$file ~/.$file
+	if [ -z ${MSYSTEM+x} ]; then
+		echo "Creating symlink to $file in home directory."
+		ln -s $dir/$file ~/.$file
+	else
+		echo "Copying config $file to home directory."
+		cp -r $dir/$file ~/.$file
+	fi
 done
