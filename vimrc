@@ -12,7 +12,7 @@ set si "Smart indent
 "set foldmethod=indent
 
 set number
-set tw=79
+set tw=72
 set formatoptions+=t
 
 "set nohlsearch
