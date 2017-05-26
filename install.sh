@@ -1,13 +1,13 @@
 #!/bin/bash
 ############################
-# This script creates symlinks from the home directory to any desired dotfiles
-# in ~/Data/dotfiles
+# This script creates symlinks in the home directory to various config files
+# or copies them under MSYS2
 ############################
 
 ########## Variables
 
-dir=~/Data/dotfiles               # dotfiles directory
-olddir=~/Data/dotfiles_old        # old dotfiles backup directory
+root_path=$( cd $(dirname $0) ; pwd -P )
+olddir=$root_path/dotfiles_old        # old dotfiles backup directory
 files="vimrc vim gitconfig"       # list of files/folders to symlink
 
 ##########
@@ -16,20 +16,19 @@ files="vimrc vim gitconfig"       # list of files/folders to symlink
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
-cd $dir
-
 # move any existing dotfiles in homedir to dotfiles_old directory, then create
 # symlinks 
 for file in $files; do
-	echo "Moving any existing dotfiles from ~ to $olddir"
-	mv ~/.$file $olddir
+	if [ -f ~/.$file ]; then
+		echo "Moving existing config file ~/.$file to $olddir"
+		mv ~/.$file $olddir
+	fi
+
 	if [ -z ${MSYSTEM+x} ]; then
-		echo "Creating symlink to $file in home directory."
-		ln -s $dir/$file ~/.$file
+		echo "Creating symlink from $root_path/$file to ~/.$file"
+		ln -s $root_path/$file ~/.$file
 	else
-		echo "Copying config $file to home directory."
-		cp -r $dir/$file ~/.$file
+		echo "Copying config $root_dir/$file to ~/.$file"
+		cp -r $root_path/$file ~/.$file
 	fi
 done
