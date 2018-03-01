@@ -9,3 +9,5 @@
 	branch = true
 	interactive = true
 	diff = true
+[rerere]
+	enabled = true
