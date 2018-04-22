@@ -28,6 +28,8 @@ autocmd Filetype markdown setlocal expandtab tabstop=4 shiftwidth=4
 
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 
+autocmd Filetype cmake setlocal expandtab tabstop=4 shiftwidth=4
+
 " source code formatting with clang-format
 map <C-K> :pyf ~/bin/clang-format.py<CR>
 imap <C-K> <ESC>:pyf ~/bin/clang-format.py<CR>i
